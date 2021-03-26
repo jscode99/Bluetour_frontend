@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdminDashboard - AddPackage</title>
+    <!-- Favicons -->
+    <link href="images/Bluetours.png" rel="icon" />
+    <link href="images/Bluetours.png" rel="apple-touch-icon" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link
+      href="/vendor/owl.carousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link href="/vendor/venobox/venobox.css" rel="stylesheet" />
+    <link href="/vendor/aos/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 45px">Add Packages</h2>
+        <form
+          action="/admin/add-packages"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputEmail4"
+                placeholder="Name"
+                name="name"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Price</label>
+              <input
+                type="number"
+                class="form-control"
+                id="inputPassword4"
+                placeholder="Price"
+                name="price"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">
+              Package Description
+            </label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              name="description"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="inputState">Category</label>
+            <select id="inputState" name="category" class="form-control">
+              <option selected>Choose..</option>
+              <option value="Cochin">Cochin</option>
+              <option value="Munnar">Munnar</option>
+              <option value="Alleppey">Alleppey</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Itinerary</label>
+            <input
+              name="image"
+              class="form-control"
+              type="file"
+              id="formFileMultiple"
+              multiple
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Upload Package</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
